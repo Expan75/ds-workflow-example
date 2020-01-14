@@ -55,7 +55,7 @@ def get_wrangled_df(company_total_serv_dict):
     # print(engagement_report_df) # => to spot bugs: print and compare with server log
 
     # Wrangle attributes into df
-    attributes_report_df = pd.read_csv('attributes_report.csv')
+    attributes_report_df = pd.read_csv('data/attributes_report.csv')
     # print(attributes_report_df)
 
     # Join them into one (map onto right ID) NOTE: need to use assign w/ astype to ensure similar data type
@@ -87,7 +87,7 @@ def get_wrangled_df(company_total_serv_dict):
 
     return merged_report_df
 
-# print(get_wrangled_df("engagement_report.log"))
+# print(get_wrangled_df("data/engagement_report.log"))
 '''
 We are now done with the preproccessing and can start answering descriptive questions and predict behaviour.
 These tasked will be split into to seperate files (within the same directory). For descriptive statistics and visualsations,

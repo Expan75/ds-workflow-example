@@ -18,7 +18,7 @@ as well as its segments.
 PART 1: Visualisation
 '''
 # Get our data in a var
-wrangled_df = get_wrangled_df("engagement_report.log")
+wrangled_df = get_wrangled_df("data/engagement_report.log")
 
 # Revert the numerical values so we can make use of value_counts for discrete strings (for pretty graphs etc.)
 wrangled_df.loc[wrangled_df['company_type'] == 1, 'company_type'] = "uk_limited_company"

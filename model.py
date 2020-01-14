@@ -1,6 +1,6 @@
 '''
-This file contains our model and the neccessary steps to deploy it. I have chosen to
-apply logistic regression, using the scikit-learn ML library.
+This file contains our model and the neccessary steps to run it. For now,
+we will utilise a simple logistic regression model.
 
 SOURCE:
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 # Get our data in a var
-wrangled_df = get_wrangled_df("engagement_report.log")
+wrangled_df = get_wrangled_df("data/engagement_report.log")
 
 # Split into y (target i.e. what we want to classify as), X = feature matrix
 X = wrangled_df[['company_type','total_times_logged']]
@@ -56,9 +56,7 @@ print("Test decimal accuracy     : " + str(log_reg.score(X_test, y_test)))
     possible improvements. This should be done before deciding to try different parameters or other
     improvements (increasing dataset size etc.).
 
-    More on this in the attached presentation ("presentation" in the current directory).
-
-    Look forward to hearing from you!
+    Please feel free to contact me for any questions (see README.md)
 
     Sincerely,
 
