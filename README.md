@@ -17,7 +17,6 @@ NOTE: to run any of the above, install Python (these scripts were run using pyth
 	
 	$ pip install -r requirements.txt
 
-## Data
 
 ## Contact
 
