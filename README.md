@@ -6,13 +6,18 @@ descriptive analytics & predictive model application + evaluation.
 
 ## Different files & Their purpose:
 
-wrangler.py - wrangles two seperate data sources into one (a log file and a csv).
+- <b>wrangler.py</b>  - wrangles two seperate data sources into one (a log file and a csv).
 
-descriptive.py - performs descriptive statistics as well as visualisation in an effort to evaluate & explore.
+- <b>descriptive.py</b>  - performs descriptive statistics as well as visualisation in an effort to evaluate & explore.
 
-model.py - applies logistic regression for predictive analytics purposes as well as rudimentary evaluation of the result.
+- <b>model.py</b> - applies logistic regression for predictive analytics purposes as well as rudimentary evaluation of the result.
 
+NOTE: to run any of the above, install Python (these scripts were run using python3.6) and install the required dependencies via pip:
+	
+	# while standing in project_workspace
+	$ pip install -r requirements.txt
 
+## Data
 
 ## Contact
 
