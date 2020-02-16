@@ -1,4 +1,4 @@
-##Hey there!
+## Hey there!
 
 This repo is made to showcase my ability to step through the data science pipeline, from inital data wrangling/cleaning to
 descriptive analytics & predictive model application + evaluation.
@@ -14,7 +14,7 @@ descriptive analytics & predictive model application + evaluation.
 
 NOTE: to run any of the above, install Python (these scripts were run using python3.6) and install the required dependencies via pip:
 	
-	# while standing in project_workspace
+	
 	$ pip install -r requirements.txt
 
 ## Data

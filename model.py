@@ -52,10 +52,6 @@ print("Test decimal accuracy     : " + str(log_reg.score(X_test, y_test)))
     than training accuracy, which can in theory happen, but shouldn't really. As we split our data
     again, this differential turns in the opposite direction (as would be expected).
 
-    Next steps would include further diagnostics of the model (plotting learning curves etc.) to suggest
-    possible improvements. This should be done before deciding to try different parameters or other
-    improvements (increasing dataset size etc.).
-
     Please feel free to contact me for any questions (see README.md)
 
     Sincerely,

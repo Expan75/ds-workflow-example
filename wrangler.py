@@ -2,11 +2,18 @@
 import csv
 import pandas as pd
 
-''' Function that wrangles the total number of logins for any given company
-    given a engagement_report.log file in the current directory.
-    The function returns a dictonary with the wrangled total usage time (key:value where company_id:total_times_logged)
-'''
+
 def engagement_report_wrangler(filename):
+    ''' Wrangles the total number of logins for any given company
+        given a engagement_report.log file in the same directory.
+        
+        takes the filename as input (i.e. rel. path if same directory)
+
+        returns dict: {
+            "company" : list of company id {STR},
+            "total_times_logged" : list of total_usages {INT}
+        }
+    '''
 
     # Use rstrip to only get each line by itself (no whitespace at the end)
     lines = [line.rstrip('\n') for line in open(filename)]
@@ -44,12 +51,17 @@ def engagement_report_wrangler(filename):
 
     return company_total_service_usage
 
-''' Function that creates a dataframe from both the attributes_report.csv and the wrangled dict of total_times_logged.
-    Takes a wrangled dict as input and returns a pandas dataframe containing the wrangled dataself.
-    NOTE: the returned dataframe is also preproccessed (turning dummy vars into digits etc.).
-'''
+
 def get_wrangled_df(company_total_serv_dict):
+    ''' Returns a fused dataset (as df) with attributes_report.csv and total_times_logged 
+
+        INPUT: company_total_serv_dict, dict containing how many times a company was logged 
+
+        NOTE: the returned dataframe is also preproccessed (turning dummy vars into digits etc.)
+    '''
+
     engagement_report_dict = engagement_report_wrangler(company_total_serv_dict)
+    print(engagement_report_dict)
     # Now that we have a dict, we turn it into a df
     engagement_report_df = pd.DataFrame.from_dict(engagement_report_dict)
     # print(engagement_report_df) # => to spot bugs: print and compare with server log
@@ -87,7 +99,7 @@ def get_wrangled_df(company_total_serv_dict):
 
     return merged_report_df
 
-# print(get_wrangled_df("data/engagement_report.log"))
+print(get_wrangled_df("data/engagement_report.log"))
 '''
 We are now done with the preproccessing and can start answering descriptive questions and predict behaviour.
 These tasked will be split into to seperate files (within the same directory). For descriptive statistics and visualsations,
